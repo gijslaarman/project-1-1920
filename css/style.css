@@ -1,0 +1,169 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background-color: whitesmoke;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    display: block;
+    padding: 1em 5em;
+    border: 0;
+    background-color: red;
+    color: white;
+    font-size: 1em;
+    margin: 0 auto;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height: 100%;
+    transition: all 250ms;
+    padding: 1em;
+    position: relative;
+    z-index: 2;
+}
+
+header > div {
+    width: 100%;
+    max-width: 30em;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+input + span {
+    display: block;
+    font-size: 0.6em;
+    opacity: 0.5;
+    text-align: center;
+    margin: 1em 0;
+}
+
+#active header {
+    height: 4em;
+    background-color: grey;
+    padding: 0.5em;
+}
+
+#active h1 {
+    display: none;
+}
+
+#active input {
+    font-size: 0.75em;
+}
+
+#active input + span {
+    display: none;
+}
+
+#active form {
+    display: flex;
+    flex: 1 1 0;
+}
+
+#active button {
+    padding: 1em;
+}
+
+main {
+    padding: 1em;
+    max-width: 80em;
+    margin: 0 auto;
+    padding-top: 5em;
+    max-height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+main > section {
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 4px 14px 0 #00000020;
+    margin: 1em 0;
+}
+
+
+.general-information {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > section > div {
+    padding: 1em;
+    max-width: 100%;
+    min-width: 20em;
+    flex: 1 1 0;
+}
+
+iframe {
+    width: 100%;
+    min-height: 15em;
+}
+@keyframes spinning-circle {
+    0% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 150.6 100.4;
+    }
+    50% {
+      stroke-dasharray: 1 250;
+    }
+    100% {
+      stroke-dashoffset: 502;
+      stroke-dasharray: 150.6 100.4;
+    }
+  }
+  
+  .spinner__circle {
+    animation: 2s linear spinning-circle infinite;
+  }
