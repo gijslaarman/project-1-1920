@@ -86,7 +86,7 @@ input + span {
     padding: 0.5em;
 }
 
-#active h1 {
+#active header h1 {
     display: none;
 }
 
