@@ -82,7 +82,7 @@ input + span {
 
 #active header {
     height: 4em;
-    background-color: grey;
+    background-color: #212121;
     padding: 0.5em;
 }
 
@@ -149,6 +149,11 @@ main > section > div {
 iframe {
     width: 100%;
     min-height: 15em;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
 }
 @keyframes spinning-circle {
     0% {
